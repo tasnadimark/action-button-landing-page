@@ -1,0 +1,59 @@
+Hello team, Dave here and I have tremendously exciting news for you all today. I'm literally so excited that this is going live at last. This has been a feature that we've been wanting to make, that we've had so many requests for. 
+
+I have such high confidence in it and I know that it's going to be a great tool in the toolbox for all of our sales folks. Hopefully it'll drive some self-serve business as well. It'll help our success team. 
+
+So yeah, a great win for our sales efforts and a great win for our customers. What am I talking about? I am talking about action buttons. So here you can see they're now part of the interaction menu. 
+
+If I add one, it looks like this and you can see it here. I can move it around and I can place it however I want. I can actually add multiple of these as well. 
+
+When I select it, you can see within the properties panel, I've got quite a lot of options. It's really great. To start with, I can do the settings and I can either have this action button open a URL or I can have a jump to a scene. 
+
+If I have it open your URL, you can place any URL here and if the user selects that URL, it will open in a separate tab. Really great for instances where you want to say, I want to learn more about this, click here or want to buy this product, click here. So tons of use cases. 
+
+This functionality even opens us up to selling more to marketing or sales teams or whatever the case is. The jump to scene functionality is a little bit different. So if I just add a blank scene here, what I can do with the jump to scene is if I select it, I can then select the scene I wanted to open to. 
+
+I'll go with scene two. In this instance, it's the only scene available to me and so this is basically a bit more for navigation purposes. Maybe you want to say, want to skip this section, click here and it will just jump to that scene that you've pointed it to.
+
+You can also make these buttons invisible. So right now, here it is. It's clearly very visible, but I can make them invisible and this is kind of a precursor to some functionality that we're going to release just slightly after the release of this feature. 
+
+So it's just now live. In the next couple of days, hopefully, Natty will be able to finish this. This is what we internally call blocking, but you can think of this as like a pause to continue. 
+
+Pause until functionality. And so here, as an example, if I capture, let me just, this is a bit of a faff. I'm just going to grab a screenshot of Colossian. 
+
+If I go in here, I'm going to delete this. I go to media. Let's upload an image from here and it should be my desktop. 
+
+Of course, I've got a million screen recordings. Are you it? You are it. Great.
+
+So I'll add this. So here, what this could represent for us guys, I'm trying to get around to this, is an opportunity to create fully interactive screen captures. And this is actually a functionality that a lot of our customers want. 
+
+So here, as an example, if I'm on this scene, I might add an interaction. I might put an action button and I could, I'm going to just drop it over. Let's say over here on the menu at the top. 
+
+I'll make it nice and small. And obviously it's now currently on top and it's in the way. But if I make it invisible, now it looks like for the user, nothing, but the user will be able to select this button. 
+
+And if we have that, that we could copy this screenshot into multiple different scenes and we could have the next state. So if the user clicks this, it jumps to the next scene, which then shows what that state would be like, which in our case would look like this. So you can create these interactive screen captures using these invisible buttons.
+
+And if you have the blocking functionality, basically it requires the user to click on something for the next thing to happen. So that's how this invisible button functionality comes in. It opens a lot of creativity. 
+
+And so, yeah, we're very excited about this blocking functionality. It's definitely something some of our customers are already asking for when we talk to them about action buttons. In the meantime, let me just go through the rest. 
+
+So I'm just going to move this back over here. Let's make it nice and big just so we can really get a sense for this. So I can change the colors. 
+
+This is, in this instance, let me just make this red so you can see exactly what's happening. I can also use the brand options. I can change the outline. 
+
+Right now, the outline is just black, right? Here you can see it's black. I can change the color of it as well. And if I adjust the stroke, you can now see that's changing a little bit. 
+
+I can really make a huge amount of stroke. Now you can see, you think to yourself, why is this black, but it looks still kind of red here? That's just simply because the opacity, right? So if I set the opacity to max, then here we go. So you've got that opacity slider as well. 
+
+Really nice. Now what else we've got? We've got rounded corners. Everyone loves a rounded corner. 
+
+So you can crack that up. You've got a shadow by default. You can change your typography options. 
+
+So you can change your font, including your personally uploaded ones. You can change the color of the text. You can change the size of the font. 
+
+You can make it bold or italic or regular. You can change the alignments of it. And of course, you can change what's on it here, just over here. 
+
+Or if you want, you can just double click on it and change it here as well. And of course, you can send it back and front. And also all of our alignment functionality works with this as well. 
+
+So a tremendous update, guys. I'm really excited about it. I hope everyone is as excited as we are. 
+
+And yeah, good luck and I'll see you all soon.

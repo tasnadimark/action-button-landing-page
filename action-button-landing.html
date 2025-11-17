@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Buttons - Colossyan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6C5CE7;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #6C5CE7;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #5647c7;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #6C5CE7;
+            border: 2px solid #6C5CE7;
+        }
+
+        .btn-secondary:hover {
+            background: #f5f4ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(180deg, #f8f7ff 0%, #ffffff 100%);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #4a4a4a;
+            margin-bottom: 32px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .cta-buttons {
+            justify-content: center;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 60px 0;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .trust-section h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 32px;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 40px;
+            background: #ddd;
+            border-radius: 4px;
+        }
+
+        /* Section Label */
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #6C5CE7;
+            margin-bottom: 16px;
+        }
+
+        /* Feature Sections */
+        .feature-section {
+            padding: 100px 0;
+        }
+
+        .feature-section:nth-child(even) {
+            background: #fafafa;
+        }
+
+        .feature-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .feature-section:nth-child(odd) .feature-content {
+            direction: rtl;
+        }
+
+        .feature-section:nth-child(odd) .feature-text {
+            direction: ltr;
+        }
+
+        .feature-text h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .feature-text p {
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .feature-visual {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #e0dbff 0%, #f5f4ff 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Try It Out Section */
+        .try-it-section {
+            padding: 100px 0;
+            background: #6C5CE7;
+            color: white;
+            text-align: center;
+        }
+
+        .try-it-section .section-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .try-it-section h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .try-it-section p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .try-it-section .btn-primary {
+            background: white;
+            color: #6C5CE7;
+        }
+
+        .try-it-section .btn-primary:hover {
+            background: #f0f0f0;
+        }
+
+        /* Capabilities Section */
+        .capabilities-section {
+            padding: 100px 0;
+        }
+
+        .capabilities-section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+        }
+
+        .capability-item h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .capability-item p {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        /* Use Cases Section */
+        .use-cases-section {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+
+        .use-cases-section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .use-case-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .use-case-visual {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #e0dbff 0%, #f5f4ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .use-case-content {
+            padding: 32px;
+        }
+
+        .use-case-content h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .use-case-content p {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        /* Coming Soon Banner */
+        .coming-soon-section {
+            padding: 60px 0;
+            background: #fff8e1;
+            text-align: center;
+        }
+
+        .coming-soon-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .coming-soon-section p {
+            font-size: 18px;
+            color: #4a4a4a;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0;
+        }
+
+        .faq-section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .faq-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 64px;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            font-size: 16px;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 100px 0;
+            background: #6C5CE7;
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta .section-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .final-cta h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .btn-primary {
+            background: white;
+            color: #6C5CE7;
+        }
+
+        .final-cta .btn-primary:hover {
+            background: #f0f0f0;
+        }
+
+        .rating {
+            margin-top: 32px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .rating strong {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .feature-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .feature-section:nth-child(odd) .feature-content {
+                direction: ltr;
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .use-cases-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Colossyan</div>
+            <ul class="nav-links">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-secondary">Login</a>
+                <a href="#" class="btn btn-primary">Book a demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Make your videos interactive<br>with action buttons</h1>
+            <p>Add clickable buttons to your videos that drive engagement, guide viewers, and turn content into action — perfect for sales, training, and interactive learning.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Try out action buttons</a>
+                <a href="#" class="btn btn-secondary">Book a demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <h3>Trusted by industry leaders</h3>
+            <div class="logos">
+                <div class="logo-placeholder"></div>
+                <div class="logo-placeholder"></div>
+                <div class="logo-placeholder"></div>
+                <div class="logo-placeholder"></div>
+                <div class="logo-placeholder"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Value Proposition -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-label">ACTION BUTTONS</div>
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2>Turn passive viewers into active participants</h2>
+                    <p>Stop losing viewers to static content. Add interactive buttons that guide users exactly where you want them to go — whether that's booking a demo, exploring your product, or navigating through your training content. Make every video a conversion opportunity.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">Try out action buttons</a>
+                        <a href="#" class="btn btn-secondary">Book a demo</a>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    [Video Preview: Action Button Demo]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: URL Actions -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-label">DRIVE ACTION</div>
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2>Turn viewers into customers with clickable CTAs</h2>
+                    <p>Add buttons that open any URL in a new tab — perfect for "Learn More," "Buy Now," or "Book a Demo" moments. Guide your viewers from content to conversion seamlessly, and track exactly where they go next.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">Try out action buttons</a>
+                        <a href="#" class="btn btn-secondary">Book a demo</a>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    [Video with "Book a Demo" button]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: Scene Navigation -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-label">VIDEO NAVIGATION</div>
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2>Let viewers control their experience</h2>
+                    <p>Add jump-to-scene buttons that let viewers skip sections, revisit content, or choose their own learning path. Create non-linear experiences where users navigate based on their needs — not a rigid timeline.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">Try out action buttons</a>
+                        <a href="#" class="btn btn-secondary">Book a demo</a>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    [Video with navigation buttons]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: Invisible Buttons -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="section-label">INTERACTIVE EXPERIENCES</div>
+            <div class="feature-content">
+                <div class="feature-text">
+                    <h2>Create fully interactive screen captures and simulations</h2>
+                    <p>Place invisible buttons over screenshots or screen recordings to build click-through demos and interactive tutorials. Show users exactly how your product works by letting them click through each step — no static screenshots required.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">Try out action buttons</a>
+                        <a href="#" class="btn btn-secondary">Book a demo</a>
+                    </div>
+                </div>
+                <div class="feature-visual">
+                    [Screenshot with invisible hotspots]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Try It Out Section -->
+    <section class="try-it-section">
+        <div class="container">
+            <div class="section-label">TRY IT OUT</div>
+            <h2>Try out Colossyan's<br>action buttons yourself</h2>
+            <p>Your next interactive video is just a click away — free to try out.</p>
+            <a href="#" class="btn btn-primary">Take a tour in action</a>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities-section">
+        <div class="container">
+            <div class="section-label" style="text-align: center;">CAPABILITIES</div>
+            <h2>Build engaging, interactive videos in minutes</h2>
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <h3>Add buttons anywhere</h3>
+                    <p>Drop action buttons anywhere in your video — customize size, position, and timing with drag-and-drop simplicity.</p>
+                </div>
+                <div class="capability-item">
+                    <h3>Open external URLs</h3>
+                    <p>Direct viewers to landing pages, product demos, booking links, or any URL to drive conversions and engagement.</p>
+                </div>
+                <div class="capability-item">
+                    <h3>Navigate between scenes</h3>
+                    <p>Create non-linear experiences where viewers jump to relevant sections based on their interests or learning needs.</p>
+                </div>
+                <div class="capability-item">
+                    <h3>Full customization</h3>
+                    <p>Adjust colors, fonts, rounded corners, shadows, opacity, and more to match your brand perfectly.</p>
+                </div>
+                <div class="capability-item">
+                    <h3>Invisible hotspots</h3>
+                    <p>Build interactive screen captures and click-through demos with invisible buttons that feel native to your content.</p>
+                </div>
+                <div class="capability-item">
+                    <h3>Multiple buttons per video</h3>
+                    <p>Add as many action buttons as needed — create complex navigation, multiple CTAs, or interactive simulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases-section">
+        <div class="container">
+            <div class="section-label" style="text-align: center;">USE CASES</div>
+            <h2>See what you can create with action buttons</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-visual">
+                        [Visual: "Request a Demo" button in video]
+                    </div>
+                    <div class="use-case-content">
+                        <h3>Sales enablement</h3>
+                        <p>Turn product videos into conversion machines. Add "Request Demo," "Get Pricing," or "Contact Sales" buttons directly in your pitch videos — guide prospects from interest to action instantly.</p>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-visual">
+                        [Visual: Navigation buttons in training video]
+                    </div>
+                    <div class="use-case-content">
+                        <h3>Interactive training</h3>
+                        <p>Create choose-your-own-path learning experiences. Let employees navigate to the sections they need, skip content they've mastered, or replay complex topics — putting learners in control.</p>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-visual">
+                        [Visual: Interactive product demo]
+                    </div>
+                    <div class="use-case-content">
+                        <h3>Product demos</h3>
+                        <p>Build interactive product walkthroughs where viewers click through each feature step-by-step. Show exactly how your product works with click-through screen captures that feel like the real thing.</p>
+                    </div>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-visual">
+                        [Visual: Documentation link button]
+                    </div>
+                    <div class="use-case-content">
+                        <h3>Customer education</h3>
+                        <p>Guide customers to support resources, documentation, or next steps with strategically placed buttons. Turn every help video into a navigation hub for your knowledge base.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon-section">
+        <div class="container">
+            <div class="section-label" style="color: #f57c00;">COMING SOON</div>
+            <h2>Pause-to-continue functionality</h2>
+            <p>Soon, you'll be able to pause videos until viewers click an action button — ensuring they engage with key moments before moving forward. Perfect for compliance training, interactive assessments, and ensuring critical information is acknowledged.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently asked questions</h2>
+            <p class="faq-subtitle">Didn't find the answer you were looking for? <a href="#" style="color: #6C5CE7;">Help center</a></p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I add an action button to my video?</h3>
+                    <p>Simply open the Interaction menu in our editor, select "Action Button," and drop it anywhere in your video. Customize the appearance, set your action (URL or scene jump), and you're done — no technical skills required.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I add multiple action buttons to one video?</h3>
+                    <p>Yes. Add as many action buttons as you need throughout your video. Use them for navigation, multiple CTAs, or building complex interactive experiences.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What can action buttons do?</h3>
+                    <p>Action buttons can open any URL in a new tab (perfect for CTAs and external links) or jump to different scenes within your video (great for navigation and non-linear content).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I customize the appearance of action buttons?</h3>
+                    <p>Absolutely. Customize colors, fonts, button size, rounded corners, shadows, stroke, opacity, and more. You can also apply your brand kit for consistent styling across all videos.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are invisible buttons used for?</h3>
+                    <p>Invisible buttons are perfect for creating interactive screen captures and click-through demos. Place them over screenshots or recordings to build realistic product walkthroughs where users click through each step.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I track clicks on action buttons?</h3>
+                    <p>Yes. When you export with SCORM or use our analytics features, you can track viewer interactions including button clicks, helping you understand engagement and optimize your content.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do action buttons work with translated videos?</h3>
+                    <p>Yes. Action buttons maintain their functionality across all translated versions of your videos, making it easy to create interactive experiences in multiple languages.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's the pause-to-continue feature?</h3>
+                    <p>Coming soon: pause-to-continue (blocking) functionality will let you pause videos until viewers click specific action buttons — perfect for ensuring engagement with critical content in training and compliance videos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="section-label">ACTION BUTTONS</div>
+            <h2>Ready to make your videos interactive?</h2>
+            <p>Create engaging, clickable videos in minutes — no complex tools, no coding required. Turn passive content into interactive experiences that drive results.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Try out action buttons</a>
+                <a href="#" class="btn btn-secondary">Book a demo</a>
+            </div>
+            <div class="rating">
+                <strong>4.8</strong>
+                from 450+ reviews on G2
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Colossyan Inc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
